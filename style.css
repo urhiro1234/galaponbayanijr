@@ -1,0 +1,477 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #000;
+    color: #fff;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background-for-my-website.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 200px;
+
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #317773;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text h1{
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 1.4;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 20px;
+    line-height: 1.4;
+}
+/*------------building--------------*/
+#Building{
+    padding: 55px 0;
+    color: #363636;
+    background-color: #e2d1f9;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.building-col-1{
+    flex-basis: 40%;
+    --gap: 10px
+    --num-cols: 3;
+    --row-height: 300px;
+
+    box-sizing: border-box;
+    padding: var(--gap);
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+}
+.building-col-1 img{
+    width: 90%;
+    height: 90%;
+    border-radius: 15px;
+    margin-top: 4%;
+    object-fit: cover;
+
+}
+.building-col-2 h1{
+    color: #317773;
+}
+.building-col-2{
+    flex-basis: 60%;
+    margin-top: 11%;
+    font-size: 23px;
+    text-indent: 20;
+    line-height: 1.5;
+    text-align: right;
+    object-fit: cover;
+}
+
+.sub-title{
+    font-size: 50px;
+    font-weight: 600;
+    color: #fff;
+/*---------about----------*/
+}
+#About{
+    padding: 100px 0;
+    color: #e2e2e2;
+    background-size: cover;
+    text-align: center;
+    background-color: #317773;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 40%;
+    text-align: center;
+    margin-top: 1%;
+    margin-left: 30%;
+    line-height: 1.4;
+}
+.about-col-1 h1{
+    color: #dbdbdb;
+    font-size: 80px;
+}
+/*--------------services------------------*/
+#services{
+    padding: 30px 0;
+    text-align: center;
+}
+.container h1{
+    font-family: "Amasis MT Pro Black";
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.services-list div{
+    background: #317773;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div:hover{
+    background: #1f524f;
+    color: #e2d1f9;
+    transform: translateY(-10px);
+}
+/*----------------portfolio-------------------*/
+#project{
+    padding: 30px 0;
+    text-align: center;
+}
+.container-1{
+    padding: 2rem;
+}
+.project-col-1 h1{
+    color: #fff;
+    font-family: "Amasis MT Pro Black";
+}
+.slider-wrapper{
+    position: relative;
+    max-width: 68rem;
+    margin: 0 auto; 
+}
+.slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+}
+.slider img{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+.slider-nav{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: -157rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.slider-nav a {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+.slider-nav a:hover {
+    opacity: 1;
+}
+/*----------------------why choose bayani---------------------*/
+#choose{
+    padding: 150px 0;
+    text-align: center;
+    color: #ffffff;
+    background-size: cover;
+    text-align: center;
+    background-color: #C8C8C8;
+    background-image: url(images/bgjuju.jpg);
+    font-size: larger;
+    font-style: bold;
+    font-size: larger;
+}
+.container-2 h1{
+    font-family: "Amasis MT Pro Black";
+}
+.choose-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    margin-top: 50px;
+}
+.choose-list h2{
+    font-family: "Comic Sans MS";
+}
+.choose-list p{
+    font-family: "Aptos Serif";
+}
+.choose-list div{
+    background: #317773;
+    padding: 30px;
+    font-size: 18px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+.choose-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.choose-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.choose-list div a{
+    text-decoration: none;
+    color: #e2d1f9;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.choose-list div:hover{
+    background: #317773;
+    transform: translateY(-10px);
+}
+/*-----------------------Ready------------------------*/
+#ready{
+    padding: 0;
+    background-color: #C8C8C8;
+}
+.ready-col-1 h1{
+    font-size: 80px;
+    margin-top: 26px;
+    color: #000;
+    font-family: "Amasis MT Pro Black";
+}
+.ready-col-2 img{
+    position: flex;
+    flex: 1 0 100%;
+}
+/*------------------------contact------------------------*/
+#contact-left{
+    flex-basis: 35%;
+}
+#contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #317773;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #e2d1f9;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: none;
+    border: 3px solid #317773;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: "montserrat";
+    margin: 10px;
+    margin-left: 0px;
+    transition: 0.8s;
+    color: #317773;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    color: #fff;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+    color: #c8c8c8;
+}
+.copyright i{
+    color: #d50303;
+}
+/*--------------------ccs for small screens-------------------*/
+nav .fas{
+    display: none;
+}
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(images/small-sreen-bg.jpg);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #317773;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .building-col-2{
+        font-size: 20px;
+    }
+    .building-col-1, .building-col-2{
+        flex-basis: 100%;
+    }
+    .building-col-1{
+        margin-bottom: 30px;
+    }
+    .building-col-2{
+        font-size: 14px;
+        text-align: center;
+    }
+    .building-col-2 h1{
+        font-size: 30px;
+        text-align: center;
+    }
+    .about-col-1 h1{
+        font-size: 30px;
+    }
+    .about-col-1{
+        font-size: 12px;
+    }
+    .slider-nav{
+        bottom: -204rem;
+    }
+    .ready-col-1 h1{
+        font-size: 85px;
+        margin: 80px;
+        font-family: "Amasis MT Pro Black";
+    }
+    .ready-col-2 img{
+        flex-basis: 10%;
+        cursor: pointer;
+    }
+    .tab.links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+}
+#msg{
+    color: #61b752;
+    margin-top: -2px;
+    display: block;
+}
